@@ -3,9 +3,9 @@ part of 'pages.dart';
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
   
+ 
   
   @override
-  
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryColor,
@@ -14,13 +14,15 @@ class WelcomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: defaultMargin),
           children:[
-            Image.asset('assets/register.png', height: 333,fit: BoxFit.fill,),
+            Image.asset('assets/register.png', 
+                height: 333,fit: BoxFit.fill,),
             const SizedBox(
               height: 15,
             ),
             Text(
               "Welcome", 
-              style: dangerTextStyle, textAlign: TextAlign.center,
+              style: dangerTextStyle, 
+              textAlign: TextAlign.center,
               ),
             const SizedBox(
               height: 15,
@@ -30,7 +32,7 @@ class WelcomePage extends StatelessWidget {
             style: whiteTextStyle.copyWith(fontSize: 20),
             textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 51,
               ),
               Container(
@@ -55,7 +57,7 @@ class WelcomePage extends StatelessWidget {
                                           
                                           decoration: BoxDecoration(
                                             color: secondaryColor,
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               topRight: Radius.circular(40),
                                               topLeft: Radius.circular(40)
                                             )
@@ -69,9 +71,8 @@ class WelcomePage extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                               children: [
                                               //jarak
-                                              SizedBox(height: 25,),
+                                              const SizedBox(height: 25,),
                                               Row(
-                                                  
                                                 children: [
                                                   Column(
                                                           crossAxisAlignment: 
@@ -85,7 +86,6 @@ class WelcomePage extends StatelessWidget {
                                                           color: 
                                                             blackColor),
                                                       ),
-                                          
                                                       Text(
                                                         "Register", 
                                                         style: whiteTextStyle
@@ -96,28 +96,26 @@ class WelcomePage extends StatelessWidget {
                                                             blackColor),
                                                       ),
                                                       ],
-                                                  ),
-                                                  Spacer(),
-                                                  Center(
-                                                    child: InkWell
-                                                    (onTap: (){
-                                                      //ketika icon ditekan
-                                                      Navigator.pop(context);
-                                                    },
-                                                    child: Image.asset(
-                                                      'assets/close.jpg', 
-                                                      height: 30, 
-                                                      width: 30,
+                                                    ),
+                                                    const Spacer(),
+                                                    Center(
+                                                      child: InkWell
+                                                      (onTap: (){
+                                                        //ketika icon ditekan
+                                                        Navigator.pop(context);
+                                                      },
+                                                      child: Image.asset(
+                                                        'assets/close.jpg', 
+                                                        height: 30, 
+                                                        width: 30,
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
                                               ),
-
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 25,
                                               ),
-
                                               TextField(
                                                 decoration: 
                                                 InputDecoration(
@@ -125,16 +123,15 @@ class WelcomePage extends StatelessWidget {
                                                     OutlineInputBorder(borderRadius: BorderRadius.circular(10),),
                                                     hintText: "info@example.com",
                                                     labelText: "username/email",
-                                                    suffixIcon: InkWell(onTap: (){
+                                                    suffixIcon: InkWell(
+                                                      onTap: (){
                                                       //saat icon ditekan
-
-                                                    },
-                                                    child: Icon(Icons
-                                                          .visibility_outlined)))),
-                                                          SizedBox(
-                                                            height: 20,
-                                                          ),
-
+                                                      },
+                                                      child: const Icon(Icons
+                                                            .visibility_outlined)))),
+                                              const SizedBox(
+                                                  height: 20,
+                                              ),
                                               TextField(
                                                 decoration: 
                                                 InputDecoration(
@@ -144,14 +141,12 @@ class WelcomePage extends StatelessWidget {
                                                     labelText: "course",
                                                     suffixIcon: InkWell(onTap: (){
                                                       //saat icon ditekan
-
                                                     },
-                                                    child: Icon(Icons
+                                                    child: const Icon(Icons
                                                           .visibility_outlined)))),
-                                              SizedBox(
-                                                height: 20,
-                                              ),
-                                                          
+                                                    const SizedBox(
+                                                        height: 20,
+                                                    ),           
                                               TextField(
                                                 decoration: 
                                                 InputDecoration(
@@ -161,14 +156,12 @@ class WelcomePage extends StatelessWidget {
                                                     labelText: "password",
                                                     suffixIcon: InkWell(onTap: (){
                                                       //saat icon ditekan
-
                                                     },
-                                                    child: Icon(Icons
+                                                    child: const Icon(Icons
                                                           .lock_outline)))),
-                                                          SizedBox(
+                                                          const SizedBox(
                                                             height: 20,
-                                                          ),
-
+                                                    ),
                                               TextField(
                                                 decoration: 
                                                 InputDecoration(
@@ -178,112 +171,137 @@ class WelcomePage extends StatelessWidget {
                                                     labelText: "confirm password",
                                                     suffixIcon: InkWell(onTap: (){
                                                       //saat icon ditekan
-
                                                     },
-                                                    child: Icon(Icons
+                                                    child:const  Icon(Icons
                                                           .lock_outline)))),
-                                                          SizedBox(
+                                                          const SizedBox(
                                                             height: 25,
-                                                          ),
-                                                          
+                                                    ),           
                                             Container(
-                height: 60, 
-                width: MediaQuery.of(context).size.width - 2 * defaultMargin,
-                child: ElevatedButton(
-                  onPressed: (){}, 
-                  child: Text(
-                    'Register', 
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 20, 
-                        fontWeight: FontWeight.w500, 
-                        color: secondaryColor),
-                    ),style: ElevatedButton.styleFrom(
-                      primary: primaryColor, 
-                      shape: RoundedRectangleBorder(               
-                        borderRadius:BorderRadius.circular(15))))),
+                                              height: 60, 
+                                              width: MediaQuery.of(context).size.width - 2 * defaultMargin,
+                                              child: ElevatedButton(
+                                                onPressed: (){}, 
+                                                child: Text(
+                                                  'Register', 
+                                                  style: whiteTextStyle.copyWith(
+                                                      fontSize: 20, 
+                                                      fontWeight: FontWeight.w500, 
+                                                      color: secondaryColor),
+                                                  ),style: ElevatedButton.styleFrom(
+                                                    primary: primaryColor, 
+                                                    shape: RoundedRectangleBorder(               
+                                                      borderRadius:BorderRadius.circular(15))))),
+                                                      SizedBox(
+                                                          height: 10,
+                                                      ),
+                                                      
 
-                        SizedBox(
-                            height: 10,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                              Text("Already have account?", 
-                              style: whiteTextStyle
-                              .copyWith(
-                                color: 
-                                primaryColor, 
-                                fontSize: 18 )),
-
-                              Text("Login", 
-                              style: whiteTextStyle
-                              .copyWith(
-                                color: 
-                                dangerColor, 
-                                fontSize: 18 ))
-                          ],
-                        ),
-                        SizedBox(
-                            height: defaultMargin,
-                        ),                                 
-
-
-                                            ],
-                                          ),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  );
-                              }, 
-                          );
-                      });
-                  }, 
-                  child: Text(
-                    'Create Account', 
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 20, 
-                        fontWeight: FontWeight.w500, 
-                        color: primaryColor),
-                    ),style: ElevatedButton.styleFrom(
-                      primary: secondaryColor, 
-                      shape: RoundedRectangleBorder(
-                        borderRadius:BorderRadius.circular(15))))),  
-
-            SizedBox(
-              height: 15,
-              ),
-              Container(
-                height: 60, 
-                width: MediaQuery.of(context).size.width - 2 * defaultMargin,
-                child: ElevatedButton(
-                  onPressed: (){}, 
-                  child: Text(
-                    'Login', 
-                    style: whiteTextStyle.copyWith(
-                        fontSize: 20, 
-                        fontWeight: FontWeight.w500, 
-                        color: secondaryColor),
-                    ),style: ElevatedButton.styleFrom(
-                      primary: primaryColor, 
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(color: secondaryColor, width: 3),
-                        borderRadius:BorderRadius.circular(15))))),
-
-                        SizedBox(
-                            height: 36,
-                        ),
-                        Text(
-                          'All Right Reserved @2023', textAlign: TextAlign.center,
-                          style: whiteTextStyle.copyWith(color: secondaryColor, fontSize: 11),
-                        ),
-                        SizedBox(
-                          height: defaultMargin,
-                        ),
-          ],   
-        ),
-      ),
-    );
-  }
-}
+                                                      SizedBox(
+                                                          height: 10,
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          Container(width: 20, height: 20, decoration: BoxDecoration(
+                                                            color: Color(0xFFD7D7D7),
+                                                            border: Border.all(color: primaryColor, width: 3), 
+                                                            borderRadius:  
+                                                              BorderRadius
+                                                                .circular(5)), child: Checkbox(
+                                                                  checkColor: Color(0xFFD7D7D7),
+                                                                  onChanged: (value){
+                                                                    // setState((){
+                                                                      
+                                                                    // });
+                                                                  }, value: null,
+                                                                ),
+                                                          ),
+                                                          SizedBox(width: 5),
+                                                          Text("Remember me", style: whiteTextStyle.copyWith(color: primaryColor, fontSize: 12)), Spacer(), Text("Forgot Password?",
+                                                          style: whiteTextStyle.copyWith(color: primaryColor,
+                                                          fontSize: 12),)
+                                                        ],),
+                                                      
+                                                      SizedBox(
+                                                         //SizeBox height: 10,
+                                                      ),
+                                                      Container(),
+                                                      SizedBox(
+                                                         //SizeBox height: 10,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment: MainAxisAlignment.center,
+                                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                                        children: [
+                                                            Text("Already have account?", 
+                                                            style: whiteTextStyle
+                                                            .copyWith(
+                                                              color: 
+                                                              primaryColor, 
+                                                              fontSize: 18 )),
+                                                            Text("Login", 
+                                                            style: whiteTextStyle
+                                                            .copyWith(
+                                                              color: 
+                                                              dangerColor, 
+                                                              fontSize: 18 ))
+                                                        ],
+                                                      ),
+                                                      SizedBox(
+                                                          height: defaultMargin,
+                                                      ),                                 
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        );
+                                    }, 
+                                );
+                            });
+                        }, 
+                        child: Text(
+                          'Create Account', 
+                          style: whiteTextStyle.copyWith(
+                              fontSize: 20, 
+                              fontWeight: FontWeight.w500, 
+                              color: primaryColor),
+                          ),style: ElevatedButton.styleFrom(
+                            primary: secondaryColor, 
+                            shape: RoundedRectangleBorder(
+                              borderRadius:BorderRadius.circular(15))))),  
+                          const SizedBox(
+                            height: 15,
+                            ),
+                          Container(
+                            height: 60, 
+                            width: MediaQuery.of(context).size.width - 2 * defaultMargin,
+                            child: ElevatedButton(
+                              onPressed: (){}, 
+                              child: Text(
+                                'Login', 
+                                style: whiteTextStyle.copyWith(
+                                    fontSize: 20, 
+                                    fontWeight: FontWeight.w500, 
+                                    color: secondaryColor),
+                                ),style: ElevatedButton.styleFrom(
+                                  primary: primaryColor, 
+                                  shape: RoundedRectangleBorder(
+                                    side: BorderSide(color: secondaryColor, width: 3),
+                                    borderRadius:BorderRadius.circular(15))))),
+                                    SizedBox(
+                                        height: 36,
+                                    ),
+                                    Text(
+                                      'All Right Reserved @2023', textAlign: TextAlign.center,
+                                      style: whiteTextStyle.copyWith(color: secondaryColor, fontSize: 11),
+                                    ),
+                                    SizedBox(
+                                      height: defaultMargin,
+                                    ),
+                      ],   
+                    ),
+                  ),
+                );
+              }}
