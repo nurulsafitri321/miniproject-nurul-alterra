@@ -43,7 +43,7 @@ class _SummaryState extends State<Summary> {
           child: TextField(
             controller: _controller,
             keyboardType: TextInputType.multiline,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 hintText: "enter the summary that you have leaned here!"),
           ),
         ),

@@ -9,6 +9,7 @@ class BookStoreGrid extends StatefulWidget {
   _BookStoreGridState createState() => _BookStoreGridState();
 }
 
+
 final storebooks = StoreBook.generateBooks();
 
 class _BookStoreGridState extends State<BookStoreGrid> {
@@ -22,7 +23,7 @@ class _BookStoreGridState extends State<BookStoreGrid> {
             physics: ScrollPhysics(),
             scrollDirection: Axis.horizontal,
             itemCount: storebooks.length,
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
@@ -47,7 +48,7 @@ class _BookStoreGridState extends State<BookStoreGrid> {
               builder: (context) => StoreBookPage(storeBook)));
         },
         child: Container(
-          padding: EdgeInsets.all(12),
+          padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
             color: Colors.black45,
             borderRadius: BorderRadius.circular(20),
@@ -57,18 +58,18 @@ class _BookStoreGridState extends State<BookStoreGrid> {
               Text(
                 storeBook.title,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.star_rounded,
                     size: 19,
                     color: Colors.yellowAccent,
@@ -76,19 +77,19 @@ class _BookStoreGridState extends State<BookStoreGrid> {
                   Text(
                     "Rating: ${storeBook.rate}",
                     textAlign: TextAlign.left,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.yellowAccent),
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 7,
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.category_rounded,
                     size: 19,
                     color: Colors.yellowAccent,
@@ -96,21 +97,21 @@ class _BookStoreGridState extends State<BookStoreGrid> {
                   Text(
                     "Category: ${storeBook.category}",
                     textAlign: TextAlign.left,
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.yellowAccent),
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       color: storeBook.ttlColor),
-                  child: Text(
+                  child: const Text(
                     "DETAIL",
                     textAlign: TextAlign.center,
                     style: TextStyle(

@@ -15,8 +15,8 @@ class BookPage extends StatelessWidget {
             _appBar(context),
             SliverToBoxAdapter(
               child: Container(
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(15),
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -36,7 +36,7 @@ class BookPage extends StatelessWidget {
                                 size: 40,
                                 color: book.ttlColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text(
@@ -47,7 +47,7 @@ class BookPage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
                           Column(
@@ -57,7 +57,7 @@ class BookPage extends StatelessWidget {
                                 size: 40,
                                 color: book.ttlColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text("${book.left} left",
@@ -66,7 +66,7 @@ class BookPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold)),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
                           Column(
@@ -76,7 +76,7 @@ class BookPage extends StatelessWidget {
                                 size: 40,
                                 color: book.ttlColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text("${book.category}",
@@ -85,7 +85,7 @@ class BookPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold)),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
                           Column(
@@ -95,7 +95,7 @@ class BookPage extends StatelessWidget {
                                 size: 40,
                                 color: book.ttlColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text("${book.read + book.left} pages",
@@ -106,7 +106,7 @@ class BookPage extends StatelessWidget {
                           ),
                         ]),
                     //short note section
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     Container(
@@ -123,12 +123,12 @@ class BookPage extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(
                             book.note,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
@@ -137,7 +137,7 @@ class BookPage extends StatelessWidget {
                       ),
                     ),
                     //Summary section
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     Container(
@@ -154,12 +154,12 @@ class BookPage extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
-                          Summary(),
+                          const Summary(),
                           //PDF Section
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           Container(
@@ -174,13 +174,13 @@ class BookPage extends StatelessWidget {
                             ),
                           ),
 
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           GestureDetector(
                             onTap: () {},
                             child: Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               width: double.infinity,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
@@ -188,7 +188,7 @@ class BookPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(20),
                                   border: Border.all(
                                       width: 2, color: book.ttlColor)),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.picture_as_pdf_rounded,
                                 color: Colors.white,
                                 size: 38,
@@ -196,7 +196,7 @@ class BookPage extends StatelessWidget {
                             ),
                           ),
                           //Images section
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           Column(
@@ -211,7 +211,7 @@ class BookPage extends StatelessWidget {
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               ClipRRect(
@@ -221,7 +221,7 @@ class BookPage extends StatelessWidget {
                                   width: double.infinity,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               ClipRRect(
@@ -231,7 +231,7 @@ class BookPage extends StatelessWidget {
                                   width: double.infinity,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               ClipRRect(
@@ -245,7 +245,7 @@ class BookPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                   ],
@@ -261,7 +261,7 @@ class BookPage extends StatelessWidget {
       expandedHeight: 70,
       backgroundColor: book.bgColor,
       leading: IconButton(
-        icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.black),
+        icon: const Icon(Icons.arrow_back_ios_rounded, color: Colors.black),
         onPressed: () => Navigator.of(context).pop(),
       ),
       flexibleSpace: FlexibleSpaceBar(

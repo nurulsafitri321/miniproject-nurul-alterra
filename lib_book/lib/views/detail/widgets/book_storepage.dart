@@ -15,8 +15,8 @@ class StoreBookPage extends StatelessWidget {
             _appBar(context),
             SliverToBoxAdapter(
               child: Container(
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(15),
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -36,7 +36,7 @@ class StoreBookPage extends StatelessWidget {
                                 size: 40,
                                 color: storebook.ttlColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text(
@@ -47,7 +47,7 @@ class StoreBookPage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
                           Column(
@@ -57,7 +57,7 @@ class StoreBookPage extends StatelessWidget {
                                 size: 40,
                                 color: storebook.ttlColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text("Rating: ${storebook.rate}",
@@ -66,7 +66,7 @@ class StoreBookPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold)),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
                           Column(
@@ -76,7 +76,7 @@ class StoreBookPage extends StatelessWidget {
                                 size: 40,
                                 color: storebook.ttlColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Text("${storebook.publisher}",
@@ -104,12 +104,12 @@ class StoreBookPage extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(
                             storebook.about,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
@@ -118,7 +118,7 @@ class StoreBookPage extends StatelessWidget {
                       ),
                     ),
                     //Demo Section
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     Container(
@@ -138,13 +138,13 @@ class StoreBookPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           GestureDetector(
                             onTap: () {},
                             child: Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               width: double.infinity,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
@@ -152,7 +152,7 @@ class StoreBookPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(20),
                                   border: Border.all(
                                       width: 2, color: storebook.ttlColor)),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.picture_as_pdf_rounded,
                                 color: Colors.white,
                                 size: 38,
@@ -160,7 +160,7 @@ class StoreBookPage extends StatelessWidget {
                             ),
                           ),
                           //Images section
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           Column(
@@ -175,7 +175,7 @@ class StoreBookPage extends StatelessWidget {
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               ClipRRect(
@@ -185,7 +185,7 @@ class StoreBookPage extends StatelessWidget {
                                   width: double.infinity,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               ClipRRect(
@@ -195,7 +195,7 @@ class StoreBookPage extends StatelessWidget {
                                   width: double.infinity,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               ClipRRect(
@@ -207,11 +207,11 @@ class StoreBookPage extends StatelessWidget {
                             ],
                           ),
                           //Cart Section
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           Container(
-                            padding: EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(20),
                             decoration: BoxDecoration(
                                 color: storebook.ttlColor,
                                 borderRadius: BorderRadius.circular(20)),
@@ -219,17 +219,17 @@ class StoreBookPage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.shopping_basket_rounded,
                                     color: Colors.white,
                                     size: 45,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 10,
                                   ),
                                   Column(
                                     children: [
-                                      Text(
+                                      const Text(
                                         "Add to Cart",
                                         style: TextStyle(
                                             color: Colors.white,
@@ -238,7 +238,7 @@ class StoreBookPage extends StatelessWidget {
                                       ),
                                       Text(
                                         "${storebook.price} \$",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             color: Colors.white,
                                             fontSize: 28,
                                             fontWeight: FontWeight.bold),
@@ -250,7 +250,7 @@ class StoreBookPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                   ],
@@ -266,7 +266,7 @@ class StoreBookPage extends StatelessWidget {
       expandedHeight: 70,
       backgroundColor: storebook.bgColor,
       leading: IconButton(
-        icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.white),
+        icon: const Icon(Icons.arrow_back_ios_rounded, color: Colors.white),
         onPressed: () => Navigator.of(context).pop(),
       ),
       flexibleSpace: FlexibleSpaceBar(
@@ -278,7 +278,7 @@ class StoreBookPage extends StatelessWidget {
                   ),
                   fit: BoxFit.cover)),
           child: Container(
-            decoration: BoxDecoration(color: Colors.black54),
+            decoration: const BoxDecoration(color: Colors.black54),
           ),
         ),
         centerTitle: true,

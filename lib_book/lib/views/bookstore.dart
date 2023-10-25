@@ -16,16 +16,16 @@ class _BookStoreState extends State<BookStore> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        title: Text("BOOKSTORE"),
+        title: const Text("BOOKSTORE"),
       ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Row(
+                const Row(
                   children: [
                     Icon(
                       Icons.auto_awesome,
@@ -44,7 +44,7 @@ class _BookStoreState extends State<BookStore> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 new SingleChildScrollView(
@@ -54,7 +54,7 @@ class _BookStoreState extends State<BookStore> {
                 SizedBox(
                   height: 30,
                 ),
-                Row(
+                const Row(
                   children: [
                     Icon(
                       Icons.beenhere,
@@ -73,17 +73,17 @@ class _BookStoreState extends State<BookStore> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 new SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: BookStoreGrid(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Row(
+                const Row(
                   children: [
                     Icon(
                       Icons.anchor_rounded,
@@ -102,7 +102,7 @@ class _BookStoreState extends State<BookStore> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 new SingleChildScrollView(

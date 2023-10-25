@@ -13,7 +13,7 @@ class BookGrid extends StatelessWidget {
     return Container(
         child: GridView.builder(
             itemCount: booklist.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
@@ -30,7 +30,7 @@ Widget _buildBookGrid(BuildContext context, Book book) {
           .push(MaterialPageRoute(builder: (context) => BookPage(book)));
     },
     child: Container(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
           color: book.bgColor, borderRadius: BorderRadius.circular(20)),
       child: Column(
@@ -42,40 +42,40 @@ Widget _buildBookGrid(BuildContext context, Book book) {
                 fontSize: 17,
                 fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Text(
             book.note,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 14,
                 color: Colors.black54,
                 fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Spacer(),
+          const Spacer(),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 8),
+            padding: const EdgeInsets.symmetric(vertical: 8),
             alignment: Alignment.center,
             width: double.infinity,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20), color: book.ttlColor),
             child: Text(
               "(${book.category})",
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,
@@ -89,18 +89,18 @@ Widget _buildBookGrid(BuildContext context, Book book) {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 0.5,
               ),
               Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,
                 ),
                 child: Text(
                   "Left: " + book.left.toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.black87,
                       fontWeight: FontWeight.bold,
                       fontSize: 11),

@@ -20,18 +20,18 @@ class _HomeViewState extends State<HomeView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              NewsCard(),
-              SizedBox(
+              const NewsCard(),
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 "Books",
                 style: TextStyle(
                     color: Colors.black87,
                     fontSize: 26,
                     fontWeight: FontWeight.w600),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Expanded(
