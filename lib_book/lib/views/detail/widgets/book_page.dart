@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:lib_book/models/books_store.dart';
 import 'package:lib_book/views/detail/widgets/summary.dart';
